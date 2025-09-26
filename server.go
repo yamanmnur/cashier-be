@@ -8,6 +8,7 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 	"github.com/spf13/viper"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -33,6 +34,14 @@ func main() {
 	})
 
 	e := echo.New()
+	// Custom CORS configuration
+	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+		AllowOrigins: []string{"http://localhost:5173"},                                      // Specify allowed origins
+		AllowMethods: []string{echo.GET, echo.POST, echo.PUT, echo.DELETE},                   // Specify allowed methods
+		AllowHeaders: []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept}, // Specify allowed headers
+		// AllowCredentials: true, // Set to true if you need to send cookies with cross-origin requests
+	}))
+
 	api := e.Group("/api/v1")
 
 	routes.AuthRoute(db.GetDbHandler(), api)
