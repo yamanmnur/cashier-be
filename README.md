@@ -39,17 +39,13 @@ use this credential if use Postgre from docker-compose
 ## Installation - backend
 
 1. Update the .env
-2. Install for Backend
+2. Run Docker Compose
 
-## Generate Test Coverage Backend
+or
 
-### Without Docker
-
-1. Update the .env value for db host
-2. Run
-   ```
-   go run ./server.go
-   ```
+1. Update the .env
+2. Run DB Host in Docker Compose or another
+3. go run server.go
 
 ## Postman Collection
 
