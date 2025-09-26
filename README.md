@@ -1,6 +1,6 @@
-# Super Bank Assesment
+# Assesment
 
-Simple Dashboard using Go & Next Js for Super Bank Assesment
+Simple Dashboard using Go
 
 ## Specification
 
