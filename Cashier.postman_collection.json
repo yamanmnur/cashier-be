@@ -1,0 +1,544 @@
+{
+	"info": {
+		"_postman_id": "cfadcf10-bceb-450a-b5df-bf54b63d8ff5",
+		"name": "Cashier",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45555817"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6InNpbTIiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NTg4ODA5OTEsImlzcyI6Imp3dHNlcnZpY2U6MzMyMSIsInJvbGVzIjpbImFkbWluIl0sInN1YiI6IjEifQ.zq4JmJaJewNb5xeb1qnMGUS_cwH9uO4ScT92_PTZ2og",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/master/product/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"master",
+								"product",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6InNpbTIiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NTg4ODA5OTEsImlzcyI6Imp3dHNlcnZpY2U6MzMyMSIsInJvbGVzIjpbImFkbWluIl0sInN1YiI6IjEifQ.zq4JmJaJewNb5xeb1qnMGUS_cwH9uO4ScT92_PTZ2og",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/master/product/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"master",
+										"product",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Sep 2025 07:28:23 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "375"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta_data\": {\n        \"message\": \"Success get product list\",\n        \"code\": \"200\"\n    },\n    \"data\": [\n        {\n            \"Id\": 1,\n            \"Code\": \"PRD002\",\n            \"Name\": \"Coca Cola 2L\",\n            \"Description\": \"Soft drink in 2 liter bottle\",\n            \"Barcode\": \"8991234567891\",\n            \"Price\": 25000,\n            \"Status\": \"ACTIVE\"\n        },\n        {\n            \"Id\": 2,\n            \"Code\": \"PRD002\",\n            \"Name\": \"Coca Cola 2L\",\n            \"Description\": \"Soft drink in 2 liter bottle\",\n            \"Barcode\": \"8991234567891\",\n            \"Price\": 25000,\n            \"Status\": \"ACTIVE\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6InNpbTIiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NTg4ODE5NjIsImlzcyI6Imp3dHNlcnZpY2U6MzMyMSIsInJvbGVzIjpbImFkbWluIl0sInN1YiI6IjEifQ.7iF0UMg9DkMFQtgchGAcTlVEeVr7XzqBUOItp4sMD2E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"PRD002\",\r\n  \"name\": \"Coca Cola 2L\",\r\n  \"description\": \"Soft drink in 2 liter bottle\",\r\n  \"barcode\": \"8991234567891\",\r\n  \"price\": 25000,\r\n  \"status\": \"ACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/master/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"master",
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6InNpbTIiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NTg4ODE5NjIsImlzcyI6Imp3dHNlcnZpY2U6MzMyMSIsInJvbGVzIjpbImFkbWluIl0sInN1YiI6IjEifQ.7iF0UMg9DkMFQtgchGAcTlVEeVr7XzqBUOItp4sMD2E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"PRD002\",\r\n  \"name\": \"Coca Cola 2L\",\r\n  \"description\": \"Soft drink in 2 liter bottle\",\r\n  \"barcode\": \"8991234567891\",\r\n  \"price\": 25000,\r\n  \"status\": \"ACTIVE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/v1/master/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"master",
+										"product"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Sep 2025 07:19:43 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "227"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta_data\": {\n        \"message\": \"Product created successfully\",\n        \"code\": \"201\"\n    },\n    \"data\": {\n        \"Id\": 2,\n        \"Code\": \"PRD002\",\n        \"Name\": \"Coca Cola 2L\",\n        \"Description\": \"Soft drink in 2 liter bottle\",\n        \"Barcode\": \"8991234567891\",\n        \"Price\": 25000,\n        \"Status\": \"ACTIVE\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6InNpbTIiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NTg4ODE5NjIsImlzcyI6Imp3dHNlcnZpY2U6MzMyMSIsInJvbGVzIjpbImFkbWluIl0sInN1YiI6IjEifQ.7iF0UMg9DkMFQtgchGAcTlVEeVr7XzqBUOItp4sMD2E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customer_name\": \"John Doe\",\r\n  \"phone_number\": \"081234567890\",\r\n  \"items\": [\r\n    {\r\n      \"product_id\": 1,\r\n      \"quantity\": 2\r\n    },\r\n    {\r\n      \"product_id\": 2,\r\n      \"quantity\": 5\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"transactions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6InNpbTIiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NTg4ODE5NjIsImlzcyI6Imp3dHNlcnZpY2U6MzMyMSIsInJvbGVzIjpbImFkbWluIl0sInN1YiI6IjEifQ.7iF0UMg9DkMFQtgchGAcTlVEeVr7XzqBUOItp4sMD2E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"customer_name\": \"John Doe\",\r\n  \"phone_number\": \"081234567890\",\r\n  \"items\": [\r\n    {\r\n      \"product_id\": 1,\r\n      \"quantity\": 2\r\n    },\r\n    {\r\n      \"product_id\": 2,\r\n      \"quantity\": 5\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/v1/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"transactions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Sep 2025 07:28:27 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "516"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta_data\": {\n        \"message\": \"Transaction created\",\n        \"code\": \"200\"\n    },\n    \"data\": {\n        \"id\": 2,\n        \"invoice_no\": \"INV-20250926-1758871707\",\n        \"user_name\": \"yaman\",\n        \"customer_name\": \"John Doe\",\n        \"phone_number\": \"081234567890\",\n        \"total\": 175000,\n        \"status\": \"PENDING\",\n        \"items\": [\n            {\n                \"id\": 3,\n                \"product_id\": \"1\",\n                \"code\": \"PRD002\",\n                \"product_name\": \"Coca Cola 2L\",\n                \"barcode\": \"8991234567891\",\n                \"price\": 25000,\n                \"quantity\": 2,\n                \"total\": 50000\n            },\n            {\n                \"id\": 4,\n                \"product_id\": \"2\",\n                \"code\": \"PRD002\",\n                \"product_name\": \"Coca Cola 2L\",\n                \"barcode\": \"8991234567891\",\n                \"price\": 25000,\n                \"quantity\": 5,\n                \"total\": 125000\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6InNpbTIiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NTg4ODA5OTEsImlzcyI6Imp3dHNlcnZpY2U6MzMyMSIsInJvbGVzIjpbImFkbWluIl0sInN1YiI6IjEifQ.zq4JmJaJewNb5xeb1qnMGUS_cwH9uO4ScT92_PTZ2og",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"transactions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6InNpbTIiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NTg4ODA5OTEsImlzcyI6Imp3dHNlcnZpY2U6MzMyMSIsInJvbGVzIjpbImFkbWluIl0sInN1YiI6IjEifQ.zq4JmJaJewNb5xeb1qnMGUS_cwH9uO4ScT92_PTZ2og",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"transactions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Sep 2025 07:43:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "515"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta_data\": {\n        \"message\": \"Transaction list\",\n        \"code\": \"200\"\n    },\n    \"data\": [\n        {\n            \"id\": 2,\n            \"invoice_no\": \"INV-20250926-1758871707\",\n            \"user_name\": \"yaman\",\n            \"customer_name\": \"John Doe\",\n            \"phone_number\": \"081234567890\",\n            \"total\": 175000,\n            \"status\": \"PENDING\",\n            \"items\": [\n                {\n                    \"id\": 3,\n                    \"product_id\": \"1\",\n                    \"code\": \"PRD002\",\n                    \"product_name\": \"Coca Cola 2L\",\n                    \"barcode\": \"8991234567891\",\n                    \"price\": 25000,\n                    \"quantity\": 2,\n                    \"total\": 50000\n                },\n                {\n                    \"id\": 4,\n                    \"product_id\": \"2\",\n                    \"code\": \"PRD002\",\n                    \"product_name\": \"Coca Cola 2L\",\n                    \"barcode\": \"8991234567891\",\n                    \"price\": 25000,\n                    \"quantity\": 5,\n                    \"total\": 125000\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Yaman\",\r\n    \"username\" : \"yaman\",\r\n    \"password\" : \"password\",\r\n    \"role\" : \"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/v1/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Yaman\",\r\n    \"username\" : \"yaman\",\r\n    \"password\" : \"password\",\r\n    \"role\" : \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Sep 2025 07:19:08 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "344"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta_data\": {\n        \"message\": \"Success To Register User\",\n        \"code\": \"200\"\n    },\n    \"data\": {\n        \"user\": {\n            \"id\": 1,\n            \"username\": \"yaman\",\n            \"name\": \"Yaman\",\n            \"role\": \"ADMIN\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsImtpZCI6InNpbTIiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NTg4ODE5NDgsImlzcyI6Imp3dHNlcnZpY2U6MzMyMSIsInJvbGVzIjpbImFkbWluIl0sInN1YiI6IjEifQ.yasJzigz9-Mzu1yu6u9ETc5UZfL8exzBkAxri9tDFds\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"yaman\",\r\n    \"password\" : \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"yaman\",\r\n    \"password\" : \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Sep 2025 07:19:22 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "336"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta_data\": {\n        \"message\": \"Success To Login User\",\n        \"code\": \"200\"\n    },\n    \"data\": {\n        \"user\": {\n            \"id\": 1,\n            \"username\": \"yaman\",\n            \"name\": \"Yaman\",\n            \"role\": \"\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsImtpZCI6InNpbTIiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NTg4ODE5NjIsImlzcyI6Imp3dHNlcnZpY2U6MzMyMSIsInJvbGVzIjpbImFkbWluIl0sInN1YiI6IjEifQ.7iF0UMg9DkMFQtgchGAcTlVEeVr7XzqBUOItp4sMD2E\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Excel",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6InNpbTIiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NTg4ODA5OTEsImlzcyI6Imp3dHNlcnZpY2U6MzMyMSIsInJvbGVzIjpbImFkbWluIl0sInN1YiI6IjEifQ.zq4JmJaJewNb5xeb1qnMGUS_cwH9uO4ScT92_PTZ2og",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/api/v1/report/excel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"v1",
+						"report",
+						"excel"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
